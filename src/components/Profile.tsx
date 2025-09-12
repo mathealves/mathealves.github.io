@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 const Profile = () => {
   const isMobile = window.matchMedia('(max-width: 500px)').matches;
   const { scrollY } = useScroll();
-  
+
   // Main container animation
   const textX = useTransform(scrollY, [0, isMobile ? 600 : 900], [-100, 0]);
   const textOpacity = useTransform(scrollY, [0, 900], [0, 1]);
@@ -52,7 +52,7 @@ const Profile = () => {
               className="mb-5"
             >
               {/* Keep your existing paragraphs, just wrap them in motion.p */}
-              {index === 0 && "Desenvolvedor full stack com mais de 2 anos de experiência profissional atuando em todas as camadas de desenvolvimento de aplicações web e mobile."}
+              {index === 0 && "Desenvolvedor full stack web e mobile."}
               {index === 1 && "Atualmente, estou cursando Ciência da Computação na Universidade La Salle, e sou formado no curso de desenvolvimento web full stack da Trybe, onde desenvolvi projetos que incluem, entre outras, tecnologias como JavaScript, React, Redux, Node.Js, Docker, Express, TypeScript, MySQL, MongoDB e Python, além de conceitos como SOLID, REST, padrões de projeto, raspagem de dados, algoritmos e estruturas de dados."}
               {index === 2 && "Um antigo entusiasta da tecnologia, desde onde ela nos diverte até onde facilita as nossas vidas."}
               {index === 3 && "Antes do desenvolvimento de software, atuei por 6 anos na área da educação como instrutor de inglês, e tive a oportunidade de trabalhar e estudar em Dublin, na Irlanda, onde residi por 1 ano e meio."}
